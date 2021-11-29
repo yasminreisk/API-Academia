@@ -1,7 +1,8 @@
 const alunosDAO = require('../DAO/alunos-DAO')
 const Alunos = require('../model/alunos-model')
+const db = require ('../infra/banco')
 
-module.exports = (app, db) => {
+module.exports = (app) => {
     const alunosDB = new alunosDAO(db)
 
     app.get('/aluno', async (req, res) => {
