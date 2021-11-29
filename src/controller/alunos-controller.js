@@ -19,7 +19,7 @@ const expAlunos = (app, db) => {
             const body = req.body
             const newAluno = new Alunos (body.nome, body.cpf, body.endereco, body.numero, body.bairro, body.cidade, body.estado, body.telefone, body.email, body.idade, body.plano)
 
-            const resp = await alunosDB.insertAlunos(newAluno)
+            const resp = await alunosDB.postAlunos(newAluno)
             res.json(resp)
             }
         catch (error) {
@@ -33,7 +33,7 @@ const expAlunos = (app, db) => {
   app.get('/alunos/:id', async (req, res) => {
             const id = req.params.id
         try {
-            const resposta = await alunosDB.getById(id)
+            const resposta = await alunosDB.getIdAlunos(id)
             res.json(resposta)
         }
         catch (error){
@@ -46,7 +46,7 @@ const expAlunos = (app, db) => {
         const body = req.body
 
         try{
-            const get = await alunosDB.getById(id)
+            const get = await alunosDB.getIdAlunos(id)
             const update = get.req[0]
 
             if (update) {

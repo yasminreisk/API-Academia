@@ -7,16 +7,16 @@ const ALUNOS_SCHEMA = `
     CREATE TABLE IF NOT EXISTS "Alunos" (
         "id" INTEGER PRIMARY KEY AUTOINCREMENT,
         "nome"     varchar(50),
-        "cpf"      INT(11),
+        "cpf"      varchar(11),
         "endereco" varchar(50),
-        "numero"   INT (5),
+        "numero"   varchar (5),
         "bairro"   varchar(25),
         "cidade"   varchar (25),
         "estado"   varchar (25),
         "telefone" varchar(11),
         "email"    varchar(30),
-        "idade"    INT(3),
-        "plano"    INT(1)
+        "idade"    varchar(3),
+        "plano"    varchar(1)
     )`
 
     function criaTabela() {
