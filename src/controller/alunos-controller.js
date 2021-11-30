@@ -50,7 +50,7 @@ const expAlunos = (app, db) => {
             const update = get.req[0]
 
             if (update) {
-                const updatedAlunos = new Alunos (body.nome || update.NAME, body.cpf || update.CPF, body.endereco || update.ENDERECO, body.numero || update.NUMERO, body.bairro || update.BAIRRO, body.cidade || update.CIDADE, body.estado || update.ESTADO, body.telefone || update.TELEFONE, body.email || update.EMAIL, body.idade || update.IDADE, body.plano || update.PLANO)
+                const updatedAlunos = new Aluno (body.nome || update.NAME, body.cpf || update.CPF, body.endereco || update.ENDERECO, body.numero || update.NUMERO, body.bairro || update.BAIRRO, body.cidade || update.CIDADE, body.estado || update.ESTADO, body.telefone || update.TELEFONE, body.email || update.EMAIL, body.idade || update.IDADE, body.plano || update.PLANO)
 
                 const resposta = await alunosDB.updateAlunos(id, updatedAlunos)
                 res.json(resposta)

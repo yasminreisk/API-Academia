@@ -1,6 +1,6 @@
 const path = require ('path')
-const pathDatabase = path.resolve(__dirname,'database.db')
 const sqlite3 = require('sqlite3').verbose()
+const pathDatabase = path.resolve(__dirname,'database.db')
 const db = new sqlite3.Database(pathDatabase)
 
 process.on('SIGINT', () =>
