@@ -1,5 +1,5 @@
 const alunosDAO = require('../DAO/alunos-DAO')
-const Alunos = require('../model/alunos-model')
+const Aluno = require('../model/alunos-model')
 
 const expAlunos = (app, db) => {
     const alunosDB = new alunosDAO(db)
@@ -17,7 +17,7 @@ const expAlunos = (app, db) => {
     app.post('/alunos', async (req,res) =>{
         try {
             const body = req.body
-            const newAluno = new Alunos (body.nome, body.cpf, body.endereco, body.numero, body.bairro, body.cidade, body.estado, body.telefone, body.email, body.idade, body.plano)
+            const newAluno = new Aluno (body.nome, body.cpf, body.endereco, body.numero, body.bairro, body.cidade, body.estado, body.telefone, body.email, body.idade, body.plano)
 
             const resp = await alunosDB.postAlunos(newAluno)
             res.json(resp)

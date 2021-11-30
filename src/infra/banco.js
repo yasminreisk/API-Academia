@@ -1,5 +1,5 @@
 const path = require ('path')
-const pathDatabase = path.resolve(__dirname,'../infra','database.db')
+const pathDatabase = path.resolve(__dirname,'database.db')
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database(pathDatabase)
 

@@ -1,12 +1,13 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3001
 const cors = require('cors')
 
 const alunos = require('./src/controller/alunos-controller')
 const db = require('./src/infra/banco')
 
 app.use(express.json())
+app.use(cors())
 app.use((req, res, next)=>
 {
   console.log('middleware ok')
