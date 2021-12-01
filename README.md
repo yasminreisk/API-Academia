@@ -18,11 +18,11 @@ A API foi construídas para fins didáticos, como fechamento do Módulo 4 da Res
 
 | Método | Rota | Funcionalidade |
 | ------ | ----- | ----------- |
-| **GET** | `/api/alunos/all` | Gets em todos|
-| **GET** | `/api/alunos/{id}` | Gets em funcionarios por {id} |
-| **POST** | `/api/alunos` | Entrada de novo funcionario |
-| **PUT** | `/api/alunos/{id}` | Alterações por {id} |
-| **DELETE** | `/api/alunos/{id}` | Deleção de funcionários {id} |
+| **GET** | `http://localhost:3001/alunos` | Gets em todos|
+| **GET** | `http://localhost:3001/alunos/{id}` | Gets em funcionarios por {id} |
+| **POST** | `http://localhost:3001/alunos` | Entrada de novo funcionario |
+| **PUT** | `http://localhost:3001/alunos/{id}` | Alterações por {id} |
+| **DELETE** | `http://localhost:3001/alunos/{id}` | Deleção de funcionários {id} |
 
 ## Dependências Gerais:
 ```js
