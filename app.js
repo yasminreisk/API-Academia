@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3001
+const PORT = process.env.PORT || 3000
 const cors = require('cors')
 
 const alunos = require('./src/controller/alunos-controller')
@@ -16,7 +16,7 @@ app.use((req, res, next)=>
 
 alunos(app, db)
 
-app.listen(port, ()=>
+app.listen(PORT, ()=>
 {
-console.log(`Servidor rodando: http://localhost:${port}/`);
+console.log("Servidor rodando: http://localhost:3000");
 })
