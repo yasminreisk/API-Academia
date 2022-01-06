@@ -63,8 +63,7 @@ npm start
 
 - [Larissa Silva](https://github.com/LariCostaSilva)
 - [Murilo Mininel](https://github.com/MuriloMininel) 
-- [Nathalie Moreira](https://github.com/NathalieMS) 
-- [Larissa Silva](https://github.com/LariCostaSilva)
+- [Nathalie Moreira](https://github.com/NathalieMS)
 
 ## Author
 
