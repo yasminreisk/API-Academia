@@ -5,8 +5,8 @@ class Aluno {
         
         this.nome = nome;
         this.cpf = cpf;
-        this.numero = numero;
         this.endereco = endereco;
+        this.numero = numero;
         this.bairro = bairro;
         this.cidade = cidade;
         this.estado = estado;
