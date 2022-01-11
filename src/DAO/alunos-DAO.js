@@ -24,8 +24,8 @@ module.exports = class AlunosDAO {
     }
 
     postAlunos(newAluno) {
-        const tab = 'INSERT INTO ALUNOS (nome, cpf, endereco, numero, bairro, cidade, estado, telefone, email, idade, plano) VALUES (?,?,?,?,?,?,?,?,?,?,?)'
-        const post = [newAluno.nome, newAluno.cpf, newAluno.endereco, newAluno.numero, newAluno.bairro, newAluno.cidade, newAluno.estado, newAluno.telefone, newAluno.email, newAluno.idade, newAluno.plano]
+        const tab = 'INSERT INTO ALUNOS (nome, cpf, endereco, estado, telefone, email, idade, plano) VALUES (?,?,?,?,?,?,?,?)'
+        const post = [newAluno.nome, newAluno.cpf, newAluno.endereco, newAluno.estado, newAluno.telefone, newAluno.email, newAluno.idade, newAluno.plano]
         
         return new Promise((resolve, reject)=> {
             this.db.run(tab, post, (error) => {
@@ -65,8 +65,8 @@ module.exports = class AlunosDAO {
 
     async updateAlunos(id, newAluno) {
         try {
-            const tab = `UPDATE ALUNOS SET NOME = (?), CPF = (?), ENDERECO = (?), NUMERO = (?), BAIRRO = (?), CIDADE = (?), ESTADO = (?), TELEFONE = (?), EMAIL = (?), IDADE = (?), PLANO = (?) WHERE ID = (?)`
-            const update = [newAluno.nome, newAluno.cpf, newAluno.endereco, newAluno.numero, newAluno.bairro, newAluno.cidade, newAluno.estado, newAluno.telefone, newAluno.email, newAluno.idade, newAluno.plano, id]
+            const tab = `UPDATE ALUNOS SET NOME = (?), CPF = (?), ENDERECO = (?), ESTADO = (?), TELEFONE = (?), EMAIL = (?), IDADE = (?), PLANO = (?) WHERE ID = (?)`
+            const update = [newAluno.nome, newAluno.cpf, newAluno.endereco, newAluno.estado, newAluno.telefone, newAluno.email, newAluno.idade, newAluno.plano, id]
             return new Promise((resolve, reject)=> {
                 this.db.run(tab, update, (error)=> {
                     if (error) {

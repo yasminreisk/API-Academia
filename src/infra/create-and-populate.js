@@ -9,19 +9,16 @@ const ALUNOS_SCHEMA = `
         "nome"     varchar(50),
         "cpf"      varchar(11),
         "endereco" varchar(50),
-        "numero"   varchar (5),
-        "bairro"   varchar(25),
-        "cidade"   varchar (25),
-        "estado"   varchar (25),
+        "estado"   varchar (10),
         "telefone" varchar(11),
         "email"    varchar(30),
         "idade"    varchar(3),
-        "plano"    varchar(1)
+        "plano"    varchar(10)
     )`
 
     function criaTabela() {
     db.run(ALUNOS_SCHEMA,(error) => {
-        if(error) console.log('Erro na criação da tabela Alunos')
+        if(error) console.log('Erro ao criar a tabela alunos.')
     })
 }
 
