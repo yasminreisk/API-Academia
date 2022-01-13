@@ -65,7 +65,7 @@ module.exports = class AlunosDAO {
 
     async updateAlunos(id, newAluno) {
         try {
-            const tab = `UPDATE ALUNOS SET NOME = (?), CPF = (?), ENDERECO = (?), ESTADO = (?), TELEFONE = (?), EMAIL = (?), PLANO = (?) WHERE ID = (?)`
+            const tab = `UPDATE ALUNOS SET nome = (?), cpf = (?), endereco = (?), estado = (?), telefone = (?), email = (?), plano = (?) where id = (?)`
             const update = [newAluno.nome, newAluno.cpf, newAluno.endereco, newAluno.estado, newAluno.telefone, newAluno.email, newAluno.plano, id]
             return new Promise((resolve, reject)=> {
                 this.db.run(tab, update, (error)=> {
