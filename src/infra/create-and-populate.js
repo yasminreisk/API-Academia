@@ -12,7 +12,6 @@ const ALUNOS_SCHEMA = `
         "estado"   varchar (10),
         "telefone" varchar(11),
         "email"    varchar(30),
-        "idade"    varchar(3),
         "plano"    varchar(10)
     )`
 

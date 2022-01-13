@@ -1,6 +1,6 @@
 class Aluno {
 
-    constructor(nome, cpf, endereco, estado, telefone, email, idade, plano)
+    constructor(nome, cpf, endereco, estado, telefone, email, plano)
     {
         
         this.nome = nome;
@@ -8,8 +8,7 @@ class Aluno {
         this.endereco = endereco;
         this.estado = estado;
         this.telefone = telefone;
-        this.email = email;
-        this.idade = idade;      
+        this.email = email;   
         this.plano = plano;
 
     }
